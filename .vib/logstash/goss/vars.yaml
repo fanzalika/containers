@@ -1,0 +1,27 @@
+binaries:
+  - java
+  - logstash
+  - logstash-plugin
+  - yq
+directories:
+  - mode: "0775"
+    paths:
+      - /bitnami/logstash
+      - /bitnami/logstash/config
+      - /bitnami/logstash/data
+      - /bitnami/logstash/pipeline
+      - /opt/bitnami/logstash
+      - /opt/bitnami/logstash/config
+      - /opt/bitnami/logstash/pipeline
+      - /opt/bitnami/logstash/logs
+      - /opt/bitnami/logstash/plugins
+      - /opt/bitnami/logstash/tmp
+      - /docker-entrypoint-initdb.d
+files:
+  - paths:
+      - /opt/bitnami/logstash/config/log4j2.properties
+      - /opt/bitnami/logstash/config/logstash.yml
+root_dir: /opt/bitnami
+version:
+  bin_name: logstash
+  flag: --version
